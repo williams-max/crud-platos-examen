@@ -36,4 +36,10 @@ su credenciales de mysql
     port: 3306,
     database: "platosdb",
 
+
+# esta validacion se lo esta haciendo en backend ubicacion de archico pages/api/index.js
+
+En la lista de platos se deben visualizar solo los platos activos. Un plato está activo cuando su fecha de inicio actividad es mayor o igual a hoy
+
+ const results = await pool.query("SELECT * FROM plato where  DATE(inicioactividad) >= DATE(NOW())");
   
